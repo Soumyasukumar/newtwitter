@@ -1,0 +1,24 @@
+{
+    "info": [
+      {
+        "id": "help_info",
+        "content": "I'm Grok, here to assist you! You can ask about features, premium subscriptions, events, groups, or anything else related to this platform."
+      },
+      {
+        "id": "features_info",
+        "content": "This platform offers features like posting tweets, joining live events (e.g., AIConf, NBAFinals), filtering by groups, and using AI summarizers for threads. Try typing '@' in the composer to autocomplete usernames!"
+      },
+      {
+        "id": "premium_info",
+        "content": "With a Premium subscription, you can unlock new features and, if eligible, receive a share of revenue. Check the 'Subscribe to Premium' section for more details."
+      },
+      {
+        "id": "events_info",
+        "content": "You can enable Live Event Mode to follow events like AIConf or NBAFinals. Select an event from the dropdown, and new tweets will refresh automatically every few seconds."
+      },
+      {
+        "id": "groups_info",
+        "content": "Filter your feed by groups such as Tech Influencers, Friends, or Sports Fans. Use the dropdown above the feed to select a group."
+      }
+    ]
+  }

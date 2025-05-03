@@ -1,0 +1,179 @@
+{
+    "tweets": [
+      {
+        "id": 1,
+        "username": "Mukul Sharma",
+        "handle": "@mukul_sharma",
+        "content": "Siri vs Perplexity 👀",
+        "image": "svsp.png",
+        "timestamp": "36m",
+        "group": "Tech Influencers",
+        "threadId": null,
+        "isThread": false,
+        "event": null
+      },
+      {
+        "id": 2,
+        "username": "User Three",
+        "handle": "@user3",
+        "content": "Just launched a new app! Check it out [here](https://example.com)! #Tech",
+        "timestamp": "2h",
+        "group": "Tech Influencers",
+        "threadId": 1,
+        "isThread": true,
+        "event": null
+      },
+      {
+        "id": 3,
+        "username": "User Three",
+        "handle": "@user3",
+        "content": "The app uses AI to personalize feeds. Try it! #Tech",
+        "image": "svsp.png",
+        "timestamp": "2h",
+        "group": "Tech Influencers",
+        "threadId": 1,
+        "isThread": true,
+        "event": null
+      },
+      {
+        "id": 4,
+        "username": "User Two",
+        "handle": "@user2",
+        "content": "Grabbing coffee with friends! ☕ Check this out: www.coffee.example.com",
+        "timestamp": "5h",
+        "group": "Friends",
+        "threadId": null,
+        "isThread": false,
+        "event": null
+      },
+      {
+        "id": 5,
+        "username": "User Three",
+        "handle": "@user3",
+        "content": "Excited for AI advancements! [Read more](https://ai.example.com) #AIConf",
+        "timestamp": "1h",
+        "group": "Tech Influencers",
+        "threadId": null,
+        "isThread": false,
+        "event": "AIConf"
+      },
+      {
+        "id": 6,
+        "username": "User Four",
+        "handle": "@user4",
+        "content": "What a game! #NBAFinals Check out: www.nba.example.com",
+        "timestamp": "30m",
+        "group": "Sports Fans",
+        "threadId": null,
+        "isThread": false,
+        "event": "NBAFinals"
+      },
+      {
+        "id": 7,
+        "username": "Tech Guru",
+        "handle": "@techguru",
+        "content": "Let's discuss the future of AI in tech! 🚀 #TechDiscussion",
+        "timestamp": "10m",
+        "image": "ai.jpg",
+        "group": "Tech Influencers",
+        "threadId": 2,
+        "isThread": true,
+        "event": null
+      },
+      {
+        "id": 8,
+        "username": "Tech Guru",
+        "handle": "@techguru",
+        "content": "AI is transforming industries faster than ever. Thoughts? #TechDiscussion",
+        "timestamp": "9m",
+        "group": "Tech Influencers",
+        "threadId": 2,
+        "isThread": true,
+        "event": null
+      },
+      {
+        "id": 9,
+        "username": "Tech Guru",
+        "handle": "@techguru",
+        "content": "What are the ethical implications of AI advancements? #TechDiscussion",
+        "timestamp": "8m",
+        "group": "Tech Influencers",
+        "threadId": 2,
+        "isThread": true,
+        "event": null
+      },
+      {
+        "id": 10,
+        "username": "User Five",
+        "handle": "@user5",
+        "content": "Speaking at AIConf about neural networks! #AIConf",
+        "timestamp": "45m",
+        "group": "Tech Influencers",
+        "threadId": 3,
+        "isThread": true,
+        "event": "AIConf"
+      },
+      {
+        "id": 11,
+        "username": "User Five",
+        "handle": "@user5",
+        "content": "Neural networks are revolutionizing data processing. #AIConf",
+        "timestamp": "44m",
+        "group": "Tech Influencers",
+        "threadId": 3,
+        "isThread": true,
+        "event": "AIConf"
+      },
+      {
+        "id": 12,
+        "username": "User Four",
+        "handle": "@user4",
+        "content": "NBA Finals are heating up! Who’s your pick? #NBAFinals",
+        "timestamp": "20m",
+        "group": "Sports Fans",
+        "threadId": 4,
+        "isThread": true,
+        "event": "NBAFinals"
+      },
+      {
+        "id": 13,
+        "username": "User Four",
+        "handle": "@user4",
+        "content": "That last play was incredible! #NBAFinals",
+        "timestamp": "19m",
+        "group": "Sports Fans",
+        "threadId": 4,
+        "isThread": true,
+        "event": "NBAFinals"
+      },
+      {
+        "id": 14,
+        "username": "Soumya Sukuma",
+        "handle": "@soukumya_sukuma",
+        "content": "Working on a new project for the hackathon! #Hackathon",
+        "timestamp": "15m",
+        "group": "Friends",
+        "threadId": 5,
+        "isThread": true,
+        "event": null
+      },
+      {
+        "id": 15,
+        "username": "Soumya Sukuma",
+        "handle": "@soukumya_sukuma",
+        "content": "The project involves real-time data analysis. Stay tuned! #Hackathon",
+        "timestamp": "14m",
+        "group": "Friends",
+        "threadId": 5,
+        "isThread": true,
+        "event": null
+      }
+    ],
+    "threadSummaries": {
+      "1": "New app launched with AI personalization.",
+      "2": "Discussion on the future of AI in tech, its rapid transformation, and ethical implications.",
+      "3": "Talk at AIConf about neural networks and their impact on data processing.",
+      "4": "Live reactions to the NBA Finals, discussing key plays.",
+      "5": "Updates on a hackathon project involving real-time data analysis."
+    }
+  }

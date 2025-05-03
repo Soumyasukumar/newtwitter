@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Style for AI Summarizer Icon */
+.ai-summarizer-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Autocomplete suggestion box */
+#suggestion-box-mobile,
+#suggestion-box-desktop {
+  z-index: 20;
+}
+
+.suggestion-item {
+  transition: background-color 0.2s;
+}
+
+/* Grok Chatbot Styles */
+#grok-chat {
+  border: 1px solid #374151;
+  scrollbar-width: thin;
+  scrollbar-color: #4B5563 #1F2937;
+}
+
+#grok-chat::-webkit-scrollbar {
+  width: 8px;
+}
+
+#grok-chat::-webkit-scrollbar-track {
+  background: #1F2937;
+}
+
+#grok-chat::-webkit-scrollbar-thumb {
+  background-color: #4B5563;
+  border-radius: 4px;
+}
+
+#grok-input {
+  border-right: none;
+}
+
+#grok-input:focus {
+  outline: none;
+  border-color: #3B82F6;
+}
+/* Floating Grok Chatbot Button */
+#grok-chat-button {
+  transition: all 0.3s ease;
+}
+
+#grok-chat-button button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* AI Summarizer Modal */
+#summarizer-modal-content {
+  scrollbar-width: thin;
+  scrollbar-color: #4B5563 #1F2937;
+}
+
+#summarizer-modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+#summarizer-modal-content::-webkit-scrollbar-track {
+  background: #1F2937;
+}
+
+#summarizer-modal-content::-webkit-scrollbar-thumb {
+  background-color: #4B5563;
+  border-radius: 4px;
+}

@@ -1,0 +1,24 @@
+{
+    "keywords": [
+      {
+        "keyword": "help",
+        "responseId": "help_info"
+      },
+      {
+        "keyword": "features",
+        "responseId": "features_info"
+      },
+      {
+        "keyword": "premium",
+        "responseId": "premium_info"
+      },
+      {
+        "keyword": "events",
+        "responseId": "events_info"
+      },
+      {
+        "keyword": "groups",
+        "responseId": "groups_info"
+      }
+    ]
+  }
