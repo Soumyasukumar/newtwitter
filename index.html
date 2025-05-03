@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>X Homepage Clone</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="min-h-screen">
+  <!-- Main Container -->
+  <div class="flex max-w-7xl mx-auto">
+    <!-- Left Sidebar (Hidden on mobile, shown via hamburger) -->
+    <div id="left-sidebar"
+      class="w-20 md:w-64 bg-black border-r border-gray-800 fixed top-0 left-0 h-full hidden md:block">
+      <div class="p-4">
+        <!-- Logo -->
+        <div class="mb-4">
+          <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+          </svg>
+        </div>
+        <!-- Menu Items -->
+        <nav class="space-y-2">
+          <a href="#"
+            class="flex items-center p-2 text-white hover:bg-gray-800 rounded-full active:bg-blue-900 active:text-blue-500">
+            <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-.75 3.75h1.5v3.75h3.75v1.5h-3.75v3.75h-1.5v-3.75H7.5v-1.5h3.75V6z" />
+            </svg>
+            <span class="hidden md:inline">Home</span>
+            <span class="w-2 h-2 bg-blue-500 rounded-full ml-2 hidden md:inline"></span>
+          </a>
+          <a href="#" class="flex items-center p-2 text-white hover:bg-gray-800 rounded-full">
+            <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 24">
+              <path
+                d="M21 8.25c0-2.485-2.015-4.5-4.5-4.5a4.503 4.503 0 00-4.218 3H7.5v1.5h4.782a4.503 4.503 0 004.218 3c2.485 0 4.5-2.015 4.5-4.5zm-9 7.5c-2.485 0-4.5-2.015-4.5-4.5S9.515 6.75 12 6.75s4.5 2.015 4.5 4.5-2.015 4.5-4.5 4.5z" />
+            </svg>
+            <span class="hidden md:inline">Explore</span>
+          </a>
+          <a href="#" class="flex items-center p-2 text-white hover:bg-gray-800 rounded-full">
+            <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm0 15.75c-.825 0-1.5-.675-1.5-1.5s.675-1.5 1.5-1.5 1.5.675 1.5 1.5-.675 1.5-1.5 1.5zm1.5-4.5h-3V6.75h3V13.5z" />
+            </svg>
+            <span class="hidden md:inline">Notifications</span>
+          </a>
+          <a href="#" class="flex items-center p-2 text-white hover:bg-gray-800 rounded-full">
+            <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M21 6.75h-3.75v-1.5c0-2.485-2.015-4.5-4.5-4.5h-3c-2.485 0-4.5 2.015-4.5 4.5v1.5H3v1.5h2.25v9c0 .825.675 1.5 1.5 1.5h12c.825 0 1.5-.675 1.5-1.5v-9H21v-1.5zm-9.75-3h3c.825 0 1.5.675 1.5 1.5v1.5h-6v-1.5c0-.825.675-1.5 1.5-1.5z" />
+            </svg>
+            <span class="hidden md:inline">Messages</span>
+          </a>
+          <a href="#" class="flex items-center p-2 text-white hover:bg-gray-800 rounded-full" onclick="openGrokModal()">
+            <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm0 3c1.655 0 3 1.345 3 3s-1.345 3-3 3-3-1.345-3-3 1.345-3 3-3zm0 12.75c-3.315 0-6-2.685-6-6h12c0 3.315-2.685 6-6 6z" />
+            </svg>
+            <span class="hidden md:inline">Grok</span>
+          </a>
+          <a href="#" class="flex items-center p-2 text-white hover:bg-gray-800 rounded-full">
+            <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-3 12.75h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5zm4.5 6h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5zm4.5 6h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5z" />
+            </svg>
+            <span class="hidden md:inline">Communities</span>
+          </a>
+          <a href="#" class="flex items-center p-2 text-white hover:bg-gray-800 rounded-full">
+            <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm0 3c1.655 0 3 1.345 3 3s-1.345 3-3 3-3-1.345-3-3 1.345-3 3-3zm0 12.75c-3.315 0-6-2.685-6-6h12c0 3.315-2.685 6-6 6z" />
+            </svg>
+            <span class="hidden md:inline">Premium</span>
+          </a>
+          <a href="#" class="flex items-center p-2 text-white hover:bg-gray-800 rounded-full">
+            <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm0 3c1.655 0 3 1.345 3 3s-1.345 3-3 3-3-1.345-3-3 1.345-3 3-3zm0 12.75c-3.315 0-6-2.685-6-6h12c0 3.315-2.685 6-6 6z" />
+            </svg>
+            <span class="hidden md:inline">Profile</span>
+          </a>
+          <a href="#" class="flex items-center p-2 text-white hover:bg-gray-800 rounded-full"
+            onclick="openMoreOptions()">
+            <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-3 12.75h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5zm4.5 6h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5zm4.5 6h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5z" />
+            </svg>
+            <span class="hidden md:inline">More</span>
+          </a>
+        </nav>
+        <!-- Post Button -->
+        <button
+          class="mt-4 w-full bg-white text-black py-2 rounded-full font-inter hover:bg-gray-200 transition-colors hidden md:block"
+          onclick="openTweetModal()">
+          Post
+        </button>
+      </div>
+      <!-- Profile Section -->
+      <div class="absolute bottom-4 left-4 flex items-center">
+        <div class="w-10 h-10 bg-gray-600 rounded-full mr-2"></div>
+        <div class="hidden md:block">
+          <p class="font-bold font-inter">Soumya Sukuma...</p>
+          <p class="text-gray-500 text-sm">@soukumya_sukuma...</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Hamburger Menu -->
+    <div
+      class="md:hidden fixed top-0 left-0 w-full bg-black border-b border-gray-800 p-4 flex items-center justify-between z-50">
+      <div>
+        <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+        </svg>
+      </div>
+      <button onclick="toggleSidebar()" class="text-white">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Center Feed -->
+    <div class="w-full md:ml-20 lg:ml-64 max-w-2xl mx-auto pt-16 md:pt-0">
+      <!-- Tweet Composer Modal (Mobile) -->
+      <div id="tweet-modal" class="fixed inset-0 bg-black bg-opacity-75 hidden flex items-center justify-center z-50">
+        <div class="bg-black border border-gray-800 p-4 rounded-lg w-11/12 max-w-md">
+          <div class="flex justify-between mb-2">
+            <h2 class="font-bold font-inter text-white">Compose Post</h2>
+            <button onclick="closeTweetModal()" class="text-gray-500 hover:text-white">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <textarea id="tweet-input"
+            class="w-full p-2 bg-black border border-gray-800 rounded font-inter resize-none text-white placeholder-gray-500"
+            placeholder="What's happening?" maxlength="280" oninput="updateCharCount()"></textarea>
+          <div class="flex justify-between mt-2">
+            <div class="flex space-x-2">
+              <svg class="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M19.5 3h-15A1.5 1.5 0 003 4.5v15A1.5 1.5 0 004.5 21h15a1.5 1.5 0 001.5-1.5v-15A1.5 1.5 0 0019.5 3zm-3.75 5.25h-7.5v1.5h7.5v-1.5zm0 3h-7.5v1.5h7.5v-1.5zm0 3h-7.5v1.5h7.5v-1.5z" />
+              </svg>
+              <svg class="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-3 12.75h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5zm4.5 6h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5zm4.5 6h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5z" />
+              </svg>
+              <svg class="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm0 15.75c-.825 0-1.5-.675-1.5-1.5s.675-1.5 1.5-1.5 1.5.675 1.5 1.5-.675 1.5-1.5 1.5zm1.5-4.5h-3V6.75h3V13.5z" />
+              </svg>
+              <svg class="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-3 12.75h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5zm4.5 6h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5zm4.5 6h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5z" />
+              </svg>
+              <svg class="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm0 3c1.655 0 3 1.345 3 3s-1.345 3-3 3-3-1.345-3-3 1.345-3 3-3zm0 12.75c-3.315 0-6-2.685-6-6h12c0 3.315-2.685 6-6 6z" />
+              </svg>
+            </div>
+            <div class="flex items-center">
+              <span id="char-count" class="text-gray-500 mr-2">0/280</span>
+              <button id="tweet-submit"
+                class="bg-blue-500 text-white px-4 py-2 rounded-full font-inter hover:bg-blue-600 disabled:opacity-50"
+                onclick="submitTweet()" disabled>
+                Post
+              </button>
+            </div>
+          </div>
+          <div id="link-preview" class="text-gray-500 text-sm mt-1 hidden"></div>
+        </div>
+      </div>
+
+      <!-- Grok Chatbot Modal -->
+      <div id="grok-modal" class="fixed inset-0 bg-black bg-opacity-75 hidden flex items-center justify-center z-50">
+        <div class="bg-black border border-gray-800 p-4 rounded-lg w-11/12 max-w-md">
+          <div class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+              <img src="grok.svg" alt="Grok Logo" class="w-6 h-6 text-blue-500 mr-2" />
+              <h2 class="font-bold font-inter text-white">Grok Assistant</h2>
+            </div>
+            <button onclick="closeGrokModal()" class="text-gray-500 hover:text-white">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div id="grok-chat" class="bg-gray-900 p-3 rounded-lg h-64 overflow-y-auto mb-2 font-inter text-white">
+            <p>Welcome! I'm Grok, created by xAI. Ask me about features, premium, events, groups, or anything else!</p>
+          </div>
+          <div class="flex items-center">
+            <input id="grok-input" type="text"
+              class="flex-1 p-2 bg-gray-800 border border-gray-700 rounded-l font-inter text-white placeholder-gray-500"
+              placeholder="Ask Grok..." />
+            <button onclick="sendGrokMessage()"
+              class="bg-blue-500 text-white px-4 py-2 rounded-r font-inter hover:bg-blue-600">Send</button>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- AI Summarizer Modal -->
+      <div id="summarizer-modal" class="fixed bg-black bg-opacity-75 hidden z-50">
+        <div id="summarizer-modal-content"
+          class="bg-black border border-gray-800 p-4 rounded-lg w-80 max-h-64 overflow-y-auto">
+          <div class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+              <svg class="w-5 h-5 text-blue-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9 14H6v-2h4v2zm6-4H6v-2h10v2zm0-4H6V7h10v2z" />
+              </svg>
+              <h2 class="font-bold font-inter text-white">Thread Summary</h2>
+            </div>
+            <button onclick="closeSummarizerModal()" class="text-gray-500 hover:text-white">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div id="summarizer-content" class="font-inter text-white">
+            <p>Loading summary...</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tweet Composer (Desktop) -->
+      <div class="bg-black border-b border-gray-800 p-4 hidden md:block">
+        <div class="flex items-start">
+          <div class="w-12 h-12 bg-gray-600 rounded-full mr-3"></div>
+          <div class="flex-1">
+            <textarea id="tweet-input-desktop"
+              class="w-full p-2 bg-black border-b border-gray-800 font-inter resize-none text-white placeholder-gray-500 focus:outline-none"
+              placeholder="What's happening?" maxlength="280" oninput="updateCharCountDesktop()"></textarea>
+            <div class="flex justify-between mt-2">
+              <div class="flex space-x-2">
+                <svg class="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M19.5 3h-15A1.5 1.5 0 003 4.5v15A1.5 1.5 0 004.5 21h15a1.5 1.5 0 001.5-1.5v-15A1.5 1.5 0 0019.5 3zm-3.75 5.25h-7.5v1.5h7.5v-1.5zm0 3h-7.5v1.5h7.5v-1.5zm0 3h-7.5v1.5h7.5v-1.5z" />
+                </svg>
+                <svg class="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-3 12.75h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5zm4.5 6h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5zm4.5 6h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5z" />
+                </svg>
+                <svg class="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm0 15.75c-.825 0-1.5-.675-1.5-1.5s.675-1.5 1.5-1.5 1.5.675 1.5 1.5-.675 1.5-1.5 1.5zm1.5-4.5h-3V6.75h3V13.5z" />
+                </svg>
+                <svg class="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-3 12.75h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5zm4.5 6h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5zm4.5 6h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5zm0-3h-1.5v-1.5h1.5v1.5z" />
+                </svg>
+                <svg class="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm0 3c1.655 0 3 1.345 3 3s-1.345 3-3 3-3-1.345-3-3 1.345-3 3-3zm0 12.75c-3.315 0-6-2.685-6-6h12c0 3.315-2.685 6-6 6z" />
+                </svg>
+              </div>
+              <div class="flex items-center">
+                <span id="char-count-desktop" class="text-gray-500 mr-2">0/280</span>
+                <button id="tweet-submit-desktop"
+                  class="bg-blue-500 text-white px-4 py-2 rounded-full font-inter hover:bg-blue-600 disabled:opacity-50"
+                  onclick="submitTweetDesktop()" disabled>
+                  Post
+                </button>
+              </div>
+            </div>
+            <div id="link-preview-desktop" class="text-gray-500 text-sm mt-1 hidden"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Event Mode -->
+      <div class="bg-black border-b border-gray-800 p-4" id="live-event-section">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center">
+            <span class="font-bold font-inter text-white mr-2">📡 Live Event Mode</span>
+            <select id="event-select" class="p-2 bg-black border border-gray-800 rounded font-inter text-white"
+              onchange="toggleLiveEvent()">
+              <option value="none">Off</option>
+              <option value="AIConf">AIConf</option>
+              <option value="NBAFinals">NBAFinals</option>
+            </select>
+          </div>
+          <button id="event-refresh"
+            class="bg-blue-500 text-white px-4 py-2 rounded-full font-inter hover:bg-blue-600 hidden"
+            onclick="refreshEventFeed()">
+            Refresh
+          </button>
+        </div>
+      </div>
+
+      <!-- Feed Tabs -->
+      <div class="bg-black border-b border-gray-800 flex">
+        <button id="for-you-tab"
+          class="flex-1 py-4 text-center font-inter font-medium text-white border-b-2 border-blue-500"
+          onclick="switchTab('for-you')">For you</button>
+        <button id="following-tab" class="flex-1 py-4 text-center font-inter font-medium text-gray-500 hover:text-white"
+          onclick="switchTab('following')">Following</button>
+      </div>
+
+      <!-- Group Filter -->
+      <div class="bg-black border-b border-gray-800 p-4" id="group-section">
+        <div class="flex items-center">
+          <span class="font-bold font-inter text-white mr-2">👥 Groups</span>
+          <select id="group-select" class="p-2 bg-black border border-gray-800 rounded font-inter text-white"
+            onchange="filterByGroup()">
+            <option value="All">All</option>
+            <option value="Tech Influencers">Tech Influencers</option>
+            <option value="Friends">Friends</option>
+            <option value="Sports Fans">Sports Fans</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Tweet Feed -->
+      <div id="tweet-feed" class="bg-black">
+        <!-- Tweets populated by JS -->
+      </div>
+      <!-- Show More Posts -->
+      <div class="bg-black border-t border-gray-800 p-4 text-center">
+        <a href="#" class="text-blue-500 font-inter hover:underline">Show 70 posts</a>
+      </div>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="hidden lg:block w-80 bg-black border-l border-gray-800 p-4">
+      <!-- Premium Subscription -->
+      <div class="mb-4 bg-gray-900 rounded-lg p-4">
+        <h2 class="text-xl font-bold font-inter mb-2">Subscribe to Premium</h2>
+        <p class="text-gray-500 font-inter mb-4">Subscribe to unlock new features...</p>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded-full font-inter hover:bg-blue-600">Subscribe</button>
+      </div>
+      <!-- Trends -->
+      <div class="bg-gray-900 rounded-lg p-4">
+        <h2 class="text-xl font-bold font-inter mb-2">What's happening</h2>
+        <div class="mb-2">
+          <p class="text-gray-500 font-inter">Entertainment · Trending</p>
+          <p class="text-white font-inter">#DhruvVikram</p>
+          <p class="text-white font-inter">2,123 posts</p>
+        </div>
+        <div class="mb-2">
+          <p class="text-gray-500 font-inter">Sports · Trending</p>
+          <p class="text-white font-inter">RCB vs CSK</p>
+          <p class="text-white font-inter">4,973 posts</p>
+        </div>
+        <div class="mb-2">
+          <p class="text-gray-500 font-inter">Trending in India</p>
+          <p class="text-white font-inter">pramod mahajan</p>
+          <p class="text-white font-inter">4,479 posts</p>
+        </div>
+        <div class="mb-2">
+          <p class="text-gray-500 font-inter">Trending in India</p>
+          <p class="text-white font-inter">#apna_kam</p>
+          <p class="text-white font-inter">82.8K posts</p>
+        </div>
+        <a href="#" class="text-blue-500 font-inter hover:underline">Show more</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- More Options Modal - Left Side -->
+  <div id="more-options-modal" class="fixed inset-0 bg-black bg-opacity-75 hidden z-50">
+    <div class="h-full w-64 bg-black border-r border-gray-800 overflow-y-auto">
+      <div class="p-4 sticky top-0 bg-black border-b border-gray-800 flex justify-between items-center">
+        <h2 class="font-bold font-inter text-white text-xl">More Options</h2>
+        <button onclick="closeMoreOptions()" class="text-gray-500 hover:text-white">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="space-y-1 p-2">
+        <div class="p-3 hover:bg-gray-800 rounded-lg cursor-pointer">
+          <h3 class="font-bold text-white">Lists</h3>
+        </div>
+        <div class="p-3 hover:bg-gray-800 rounded-lg cursor-pointer">
+          <h3 class="font-bold text-white">Premium</h3>
+          <p class="text-gray-500 text-sm mt-1">Bookmarks, Communities, Monetization, Verified Orgs, Ads, Jobs</p>
+        </div>
+        <div class="p-3 hover:bg-gray-800 rounded-lg cursor-pointer">
+          <h3 class="font-bold text-white">Bookmarks</h3>
+        </div>
+        <div class="p-3 hover:bg-gray-800 rounded-lg cursor-pointer">
+          <h3 class="font-bold text-white">Communities</h3>
+        </div>
+        <div class="p-3 hover:bg-gray-800 rounded-lg cursor-pointer">
+          <h3 class="font-bold text-white">Monetization</h3>
+        </div>
+        <div class="p-3 hover:bg-gray-800 rounded-lg cursor-pointer">
+          <h3 class="font-bold text-white">Verified Orgs</h3>
+        </div>
+        <div class="p-3 hover:bg-gray-800 rounded-lg cursor-pointer">
+          <h3 class="font-bold text-white">Ads</h3>
+        </div>
+        <div class="p-3 hover:bg-gray-800 rounded-lg cursor-pointer">
+          <h3 class="font-bold text-white">Jobs</h3>
+        </div>
+        <div class="p-3 hover:bg-gray-800 rounded-lg cursor-pointer">
+          <h3 class="font-bold text-white">Create your Space</h3>
+        </div>
+        <div class="p-3 hover:bg-gray-800 rounded-lg cursor-pointer">
+          <h3 class="font-bold text-white">Settings and privacy</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Load JavaScript files -->
+  <script src="js/data.js"></script>
+  <script src="js/tweets.js"></script>
+  <script src="js/composer.js"></script>
+  <script src="js/events.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/grokChat.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Floating Grok Chatbot Button -->
+  <div id="grok-chat-button" class="fixed bottom-4 right-4 z-50">
+    <button onclick="toggleGrokModal()" class="bg-blue-500 p-4 rounded-full shadow-lg hover:bg-blue-600">
+      <img src="grok.svg" alt="Grok Logo" class="w-6 h-6 text-white" />
+    </button>
+  </div>
+
+
+</body>
+
+</html>
